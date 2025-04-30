@@ -1,0 +1,372 @@
+:root {
+    --primary-blue: #0057b7; /* Ukrainian Blue */
+    --primary-yellow: #ffd700; /* Ukrainian Yellow */
+    --dark-text: #333;
+    --light-text: #fff;
+    --grey-bg: #f4f4f4;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Consider adding a more modern font later */
+    margin: 0;
+    padding: 0;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    color: var(--primary-blue);
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    color: var(--light-text);
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+header .subtitle {
+    color: var(--primary-yellow);
+    font-size: 1.1em;
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+}
+
+section:nth-child(even) {
+    background-color: var(--grey-bg);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+/* Presentation Section */
+#presentation .differentiators {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--primary-yellow);
+    border-radius: 5px;
+}
+
+#presentation .differentiators span {
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
+/* Benefits Section */
+#benefits .benefit-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+#benefits .benefit-item i {
+    font-size: 2.5em; /* Placeholder for icons */
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+#benefits .benefit-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Target Audience & Guide Content */
+#target-audience ul, #guide-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+#target-audience li, #guide-content li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+#target-audience li i, #guide-content li::before {
+    color: var(--primary-blue);
+    position: absolute;
+    left: 0;
+    top: 5px; /* Adjust as needed */
+    /* Using ::before for guide content list */
+}
+
+#guide-content li::before {
+    content: "\2713"; /* Checkmark */
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+#testimonials .testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#testimonials .testimonial-item {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#testimonials .testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#testimonials .testimonial-item span {
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+/* CTA Section */
+#cta {
+    background-color: var(--primary-yellow);
+    text-align: center;
+}
+
+#cta h2 {
+    color: var(--primary-blue);
+}
+
+#cta .offer {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+#cta .price {
+    margin-bottom: 20px;
+}
+
+#cta .old-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+#cta .new-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+#cta .cta-button {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#cta .cta-button:hover {
+    background-color: #00418a; /* Darker blue */
+}
+
+#cta .secure-payment {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* FAQ Section */
+#faq .faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+#faq .faq-item:last-child {
+    border-bottom: none;
+}
+
+#faq h3 {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer nav a {
+    color: var(--light-text);
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    color: var(--primary-yellow);
+}
+
+/* Cookie Consent Banner */
+#cookie-consent-banner {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+#cookie-consent-banner p {
+    margin: 0 10px 10px 10px; /* Add bottom margin for spacing on wrap */
+    flex-grow: 1;
+}
+
+#cookie-consent-banner a {
+    color: var(--primary-yellow);
+    text-decoration: underline;
+}
+
+#cookie-consent-banner button {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px; /* Space between text and button */
+}
+
+#cookie-consent-banner button:hover {
+    background-color: #00418a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    #presentation .differentiators {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #benefits .benefit-list,
+    #testimonials .testimonial-list {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+
+    #cta .old-price {
+        font-size: 1.1em;
+    }
+
+    #cta .new-price {
+        font-size: 1.6em;
+    }
+
+    #cta .cta-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    #cookie-consent-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #cookie-consent-banner button {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .subtitle {
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Add placeholders for icons if using a font library */
+/* Example using Font Awesome (requires adding Font Awesome library) */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'); */
+
+/* Placeholder icon styles - replace with actual icons or library */
+.icon-check::before { content: '\2713'; margin-right: 5px; } /* Checkmark */
+.icon-briefcase::before { content: '\1F4BC'; margin-right: 5px; } /* Briefcase emoji */
+.icon-users::before { content: '\1F465'; margin-right: 5px; } /* Users emoji */
+.icon-bulb::before { content: '\1F4A1'; margin-right: 5px; } /* Bulb emoji */
+.icon-map::before { content: '\1F5FA'; display: block; } /* Map emoji */
+.icon-legal::before { content: '\2696'; display: block; } /* Scales emoji */
+.icon-money::before { content: '\1F4B0'; display: block; } /* Money bag emoji */
+.icon-target::before { content: '\1F3AF'; display: block; } /* Target emoji */
+.icon-cogs::before { content: '\2699'; display: block; } /* Cogs emoji */
+.icon-shield::before { content: '\1F6E1'; display: block; } /* Shield emoji */
+.icon-lightbulb::before { content: '\1F4A1'; display: block; } /* Bulb emoji */
+.icon-user-plus::before { content: '+'; margin-right: 5px; font-weight: bold; } /* Simple plus */
+.icon-graduation-cap::before { content: '\1F393'; margin-right: 5px; } /* Graduation cap emoji */
+.icon-refresh::before { content: '\21BB'; margin-right: 5px; } /* Refresh symbol */
+.icon-globe::before { content: '\1F30D'; margin-right: 5px; } /* Globe emoji */
+
+/* Note: Emoji rendering can vary. Using an icon font library like Font Awesome is recommended for consistency. */
+
